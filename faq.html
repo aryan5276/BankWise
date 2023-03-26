@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<head>
+    <title>BankWise</title>
+    
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+</body>
+</html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            background-image:url("https://previews.123rf.com/images/ngad/ngad1708/ngad170800266/84706517-pile-coin-money-with-account-book-finance-and-banking-concept-for-background-concept-in-grow-and.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7a7776;
+            color: white;
+            padding:35px;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin-left: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            border-bottom: 2px solid white;
+        }
+        .container {
+            max-width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            margin-top: 50px;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #b9c8cd;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #2b0a59;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 15px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #210239;
+        }
+        .bank-table {
+            display: inline-block;
+            width: 45%;
+            height:20%;
+            color:greenyellow;
+            margin-right: 20px;
+            vertical-align: top;
+            font-size:20px;
+        }
+        
+        .rank {
+            width: 50px;
+            background-color: #f1c40f; /* yellow */
+        }
+        
+        .name {
+            width: 300px;
+            background-color: #3498db; /* blue */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">BankWise</div>
+        
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('favorites') }}">Favorites</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class = "container">
+        <form action="/faq" method="post">
+            <div class="search-container">
+                <input type="text" name="faq" placeholder="Ask me anything...">
+                <button type="submit"><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+            </div>
+        </form>
+
+        
+        <style>
+            input[type="text"] {
+                padding: 12px 16px;
+                width: 90%;
+                font-size: medium;
+                height: max-content;
+                border-radius: 4px;
+                border: none;
+            }
+
+            .search-container {
+                display: flex;
+                align-items: center;
+                background-color: white;
+                padding: 10px;
+                border-radius: 20px;
+                box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            #search {
+                flex: 1;
+                border: none;
+                font-size: 16px;
+                margin-left: 10px;
+            }
+            
+            #search:focus {
+                outline: none;
+            }
+            
+            button[type="submit"] {
+                background-color: #2b0a59;
+                color: rgb(208, 17, 17);
+                border: none;
+                padding: 8px 15px;
+                border-radius: 20px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            
+            button[type="submit"]:hover {
+                background-color: #210239;
+            }
+            svg {
+                color: #fff;
+                fill: currentColor;
+                width: 24px;
+                height: 24px;
+                padding: 10px;
+            }
+            .container {
+                
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 15px;
+                background-color: #7a7776; 
+                box-shadow: 2 2 10px rgba(41, 197, 168, 0.2);
+                border-radius: 10px;
+                margin-top: 30px;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 20px;
+            }
+            
+        </style>
+        
+        
+    </div>
+
+    <div class="container">        
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Ask me anything...</title>
+            <style>
+                .answer {
+                    font-size: medium;
+                    align-items: center;
+                    align-self: center;
+                    text-align: center;
+                    height: 300px;
+                    width: fit-content;
+                    background-color: #7a7776;
+                    border-radius: 25px;
+                    color: black;
+                }
+
+                p {
+                    font-size: large;
+                    align-items: center;
+                    align-self: center;
+                    text-align: center;
+                    border-radius: 25px;
+                    color: black;
+                    font-style: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="answer">
+                {% if answer %}
+                <p id="p1">{{ answer }}</p>
+                {% endif %}
+            </div>
+        </body>
+        </html>
+    </div>
+    
+    
+    <div style="background-color: #34495E; color: white; padding: 20px; display: flex; justify-content: center; align-items: center; font-size: 18px; letter-spacing: 1px;">
+        Contact us: +1-(240)-927-7610 | Email: <a href="mailto:amukhs13@terpmail.umd.edu">amukhs13@terpmail.umd.edu</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<section class="contact-us">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  
+  <style>
+    .contact-us {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    
+    .contact-us h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .contact-us form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .contact-us label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .contact-us input,
+    .contact-us textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .contact-us button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .contact-us button:hover {
+      background-color: #3e8e41;
+    }
+  </style>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Name</title>
+    <style>
+      /* Add styling here */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+      }
+      nav {
+        background-color: #4CAF50;
+        overflow: hidden;
+      }
+      nav a {
+        float: right;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px;
+        background-color: rgb(226, 233, 185);
+      }
+      section {
+        flex: 1;
+        margin: 80px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{{ bank_name }}</h1>
+    </header>
+    <nav>
+      <a href="{{ url_for('about') }}">About Us</a>
+      <a href="{{ url_for('index') }}">Home</a>
+    </nav>
+    <main>
+      <section>
+        <h2>Bank Type</h2>
+        <p>{{ bank_type }}</p>
+      </section>
+      <section>
+        <h2>Overall Score</h2>
+        <p>{{ result }}</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Bank Stability Factors</p>
+    </footer>
+  </body>
+</html>

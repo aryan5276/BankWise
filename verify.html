@@ -1,0 +1,119 @@
+
+<html>
+<head>
+	<title>Verify Page</title>
+	<style>
+		body {
+			background-color: #F5F5F5;
+			font-family: Arial, sans-serif;
+		}
+        .header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #4CAF50;
+			color: white;
+			padding: 20px;
+		}
+		.logo {
+			font-size: 30px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+		nav li {
+			margin-left: 20px;
+		}
+		nav a {
+			color: white;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		nav a:hover {
+			border-bottom: 2px solid white;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: white;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			border-radius: 10px;
+			margin-top: 50px;
+		}
+       
+		h1 {
+			text-align: center;
+			color:  #4CAF50;
+			margin-top: 50px;
+		}
+		form {
+			max-width: 400px;
+			margin: 0 auto;
+			background-color: white;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			border-radius: 10px;
+		}
+		label {
+			display: block;
+			margin-top: 20px;
+			color: #4CAF50;
+			font-weight: bold;
+		}
+		input[type=tel], input[type=text], input[type=submit] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			color: #555;
+			margin-top: 5px;
+			box-sizing: border-box;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		input[type=submit]:hover {
+			background-color: #4CAF50;
+		}
+	</style>
+</head>
+<body>
+    <header class="header">
+		<div class="logo">My Website</div>
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+				<li><a href="#">About Us</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="container">
+	<h1>Verify</h1>
+	<form action="/verify" method="post">
+		<label for="phone-number">One Time Passcode:</label>
+		<input type="tel" id="phone-number" name="phone-number" required>
+		<input type="submit" value="Sign Up">
+	</form>
+    {% if phone and status %}
+    <h2>{{phone}} {{status}}</h2>
+    {% endif %}
+    </div>
+</body>
+</html>
+
